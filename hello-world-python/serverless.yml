@@ -7,12 +7,12 @@ provider:
   lambdaHashingVersion: 20201221
   profile: serverless-admin
   region: eu-west-1
+  memorySize: 512
+  timeout: 2
 
 functions:
   hello-short-timeout:
     handler: handler.hello
-    memorySize: 128
-    timeout: 3
   hello-long-timeout:
     handler: handler.hello
     memorySize: 256
