@@ -1,0 +1,16 @@
+service: service-04-python-example-vpc
+frameworkVersion: '2'
+provider:
+  name: aws
+  runtime: python2.7
+  lambdaHashingVersion: 20201221
+  profile: serverless-admin
+  vpc:
+    securityGroupIds:
+      - sg-XXXX
+    subnetIds:
+      - subnet-XXX
+      - subnet-XXX
+functions:
+  hello:
+    handler: handler.hello
